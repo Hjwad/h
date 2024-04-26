@@ -22,9 +22,9 @@ MONGO_DB_URI = getenv("MONGO_DB_URI", "mongodb+srv://mmqqsks:w7U5p2vlMr9mTXhI@so
 
 DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", 2000))
 
-SONG_DOWNLOAD_DURATION = int(getenv("DURATION_LIMIT", 60))
+SONG_DOWNLOAD_DURATION = int(getenv("SONG_DOWNLOAD_DURATION", "900"))
 
-SONG_DOWNLOAD_DURATION_LIMIT = int(getenv("DURATION_LIMIT", 60))
+SONG_DOWNLOAD_DURATION_LIMIT = int(getenv("SONG_DOWNLOAD_DURATION_LIMIT", "900"))
 
 # Chat id of a group for logging bot's activities
 LOGGER_ID = int(getenv("LOGGER_ID", None))
