@@ -24,7 +24,7 @@ SONG_COMMAND = ["song"]
 
 
 @app.on_message(
-    filters.command(SONG_COMMAND)
+    filters.(SONG_COMMAND)
     & filters.group
     & ~BANNED_USERS
 )
