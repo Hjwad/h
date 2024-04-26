@@ -27,7 +27,7 @@ from ZelzalMusic.utils.inline.song import song_markup
 @app.on_message(
     command(
         [
-            "بحث",
+            "بحث"
         ]
     )
     & ~BANNED_USERS
