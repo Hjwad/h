@@ -25,25 +25,21 @@ SONG_COMMAND = ["song"]
 @app.on_message(
     filters.command(["بحث","تحميل"])
     & filters.group
-    & ~filters.edited
     & ~BANNED_USERS
 )
 @app.on_message(
     filters.command(SONG_COMMAND)
     & filters.private
-    & ~filters.edited
     & ~BANNED_USERS
 )
 @app.on_message(
     command(["تحميل","بحث"])
     & filters.private
-    & ~filters.edited
     & ~BANNED_USERS
 )
 @app.on_message(
     command(["تحميل","بحث"])
     & filters.channel
-    & ~filters.edited
     & ~BANNED_USERS
 )
 
