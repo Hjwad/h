@@ -20,14 +20,6 @@ from ZelzalMusic.utils.inline.song import song_markup
 
 
 # Command
-SONG_COMMAND = ["song"]
-
-
-@app.on_message(
-    filters.(SONG_COMMAND)
-    & filters.group
-    & ~BANNED_USERS
-)
 
 
 @app.on_message(
