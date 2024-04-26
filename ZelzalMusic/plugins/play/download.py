@@ -31,7 +31,7 @@ SONG_COMMAND = ["song"]
 
 
 @app.on_message(
-    command(["/song", "بحث"]) & ~BANNED_USERS
+    (["/song", "بحث"]) & ~BANNED_USERS
 )
 
 
