@@ -9,15 +9,36 @@ from pyrogram.types import (InlineKeyboardButton,
                             InlineKeyboardMarkup, InputMediaAudio,
                             InputMediaVideo, Message)
 
-from config import (BANNED_USERS)
+from config import (BANNED_USERS, SONG_DOWNLOAD_DURATION,
+                    SONG_DOWNLOAD_DURATION_LIMIT,
+                    AMBOT)
 from ZelzalMusic import YouTube, app
 from ZelzalMusic.utils.decorators.language import language, languageCB
 from ZelzalMusic.utils.formatters import convert_bytes
 from ZelzalMusic.utils.inline.song import song_markup
 
 # Command
+SONG_COMMAND = ["song"]
 
-@app.on_message(command(["/channelplay", "بحث"]) & filters.group & ~BANNED_USERS)
+
+@app.on_message(
+    filters.command(SONG_COMMAND)
+    & filters.group
+    & ~BANNED_USERS
+)
+@language
+async def song_commad_group(client, message: Message, _):
+    upl = InlineKeyboardMarkup(
+        [
+            [
+                InlineKeyboardButton(
+                    text=_["SG_B_1"],
+                    url=f"https://t.me/{app.username}?start=song",
+                ),
+            ]
+        ]
+    )
+    await message.reply_text(_["song_1"], reply_markup=upl)
 
 
 # Song Module
