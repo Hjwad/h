@@ -18,27 +18,8 @@ from ZelzalMusic.utils.formatters import convert_bytes
 from ZelzalMusic.utils.inline.song import song_markup
 
 # Command
-SONG_COMMAND = ["song"]
 
-
-@app.on_message(
-    filters.command(SONG_COMMAND)
-    & filters.group
-    & ~BANNED_USERS
-)
-@language
-async def song_commad_group(client, message: Message, _):
-    upl = InlineKeyboardMarkup(
-        [
-            [
-                InlineKeyboardButton(
-                    text=_["SG_B_1"],
-                    url=f"https://t.me/{app.username}?start=song",
-                ),
-            ]
-        ]
-    )
-    await message.reply_text(_["song_1"], reply_markup=upl)
+@app.on_message(command(["/channelplay", "بحث"]) & filters.group & ~BANNED_USERS)
 
 
 # Song Module
