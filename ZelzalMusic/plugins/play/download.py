@@ -22,8 +22,16 @@ from ZelzalMusic.utils.inline.song import song_markup
 # Command
 
 
+
+
 @app.on_message(
-    filter(["/song", "بحث"]) & ~BANNED_USERS
+    command(
+        [
+            "بحث",
+            ,
+        ]
+    )
+    & ~BANNED_USERS
 )
 
 
