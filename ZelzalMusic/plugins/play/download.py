@@ -28,7 +28,6 @@ from ZelzalMusic.utils.inline.song import song_markup
     command(
         [
             "بحث",
-            ,
         ]
     )
     & ~BANNED_USERS
