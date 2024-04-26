@@ -24,6 +24,8 @@ DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", 2000))
 
 SONG_DOWNLOAD_DURATION = int(getenv("DURATION_LIMIT", 60))
 
+SONG_DOWNLOAD_DURATION_LIMIT = int(getenv("DURATION_LIMIT", 60))
+
 # Chat id of a group for logging bot's activities
 LOGGER_ID = int(getenv("LOGGER_ID", None))
 
