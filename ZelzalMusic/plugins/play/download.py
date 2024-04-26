@@ -9,8 +9,7 @@ from pyrogram.types import (InlineKeyboardButton,
                             InlineKeyboardMarkup, InputMediaAudio,
                             InputMediaVideo, Message)
 
-from config import (BANNED_USERS, SONG_DOWNLOAD_DURATION,
-                    SONG_DOWNLOAD_DURATION_LIMIT)
+from config import (BANNED_USERS)
 from ZelzalMusic import YouTube, app
 from ZelzalMusic.utils.decorators.language import language, languageCB
 from ZelzalMusic.utils.formatters import convert_bytes
