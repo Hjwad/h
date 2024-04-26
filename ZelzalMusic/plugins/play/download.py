@@ -8,7 +8,7 @@ from pyrogram.enums import ChatAction
 from pyrogram.types import (InlineKeyboardButton,
                             InlineKeyboardMarkup, InputMediaAudio,
                             InputMediaVideo, Message)
-
+from strings import get_command
 from config import (BANNED_USERS, SONG_DOWNLOAD_DURATION,
                     SONG_DOWNLOAD_DURATION_LIMIT,
                     AMBOT)
@@ -18,7 +18,7 @@ from ZelzalMusic.utils.formatters import convert_bytes
 from ZelzalMusic.utils.inline.song import song_markup
 
 
-
+SONG_COMMAND = get_command("SONG_COMMAND")
 # Command
 
 
