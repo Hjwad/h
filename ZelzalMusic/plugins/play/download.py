@@ -20,7 +20,7 @@ from ZelzalMusic.utils.inline.song import song_markup
 
 
 # Command
-SONG_COMMAND = get_command("SONG_COMMAND")
+SONG_COMMAND = command("SONG_COMMAND")
 
 
 @app.on_message(
