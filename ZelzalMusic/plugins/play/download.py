@@ -23,7 +23,7 @@ from ZelzalMusic.utils.inline.song import song_markup
 SONG_COMMAND = ["song"]
 
 @app.on_message(
-    filters.command(["بحث","تحميل"])
+    filters.command(["بحث","تحميل"],"")
     & filters.group
     & ~BANNED_USERS
 )
@@ -33,12 +33,12 @@ SONG_COMMAND = ["song"]
     & ~BANNED_USERS
 )
 @app.on_message(
-    filters.command(["تحميل","بحث"])
+    filters.command(["تحميل","بحث"],"")
     & filters.private
     & ~BANNED_USERS
 )
 @app.on_message(
-    filters.command(["تحميل","بحث"])
+    filters.command(["تحميل","بحث"],"")
     & filters.channel
     & ~BANNED_USERS
 )
