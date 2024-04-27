@@ -574,7 +574,7 @@ class Call(PyTgCalls):
         if config.STRING5:
             await self.five.start()
 
-    async def decorators(self):
+    async def pytgcalls(self):
         @self.one.on_kicked()
         @self.two.on_kicked()
         @self.three.on_kicked()
