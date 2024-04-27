@@ -607,10 +607,10 @@ class Call(PyTgCalls):
         @self.three
         @self.four
         @self.five
-        async def stream_end_handler(client, update: Update):
+        async def (client, update: Update):
             if not isinstance(update, StreamAudioEnded):
                 return
-            await self.change_stream(client, update.chat_id)
+            await (client, update.chat_id)
 
 
 Zelzaly = Call()
