@@ -575,33 +575,33 @@ class Call(PyTgCalls):
             await self.five.start()
 
     async def decorators(self):
-        @pytgcalls.one.on_kicked()
-        @pytgcalls.two.on_kicked()
-        @pytgcalls.three.on_kicked()
-        @pytgcalls.four.on_kicked()
-        @pytgcalls.five.on_kicked()
-        @pytgcalls.one.on_closed_voice_chat()
-        @pytgcalls.two.on_closed_voice_chat()
-        @pytgcalls.three.on_closed_voice_chat()
-        @pytgcalls.four.on_closed_voice_chat()
-        @pytgcalls.five.on_closed_voice_chat()
-        @pytgcalls.one.on_left()
-        @pytgcalls.two.on_left()
-        @pytgcalls.three.on_left()
-        @pytgcalls.four.on_left()
-        @pytgcalls.five.on_left()
+        @PyTgCalls.one.on_kicked()
+        @PyTgCalls.two.on_kicked()
+        @PyTgCalls.three.on_kicked()
+        @PyTgCalls.four.on_kicked()
+        @PyTgCalls.five.on_kicked()
+        @PyTgCalls.one.on_closed_voice_chat()
+        @PyTgCalls.two.on_closed_voice_chat()
+        @PyTgCalls.three.on_closed_voice_chat()
+        @PyTgCalls.four.on_closed_voice_chat()
+        @PyTgCalls.five.on_closed_voice_chat()
+        @PyTgCalls.one.on_left()
+        @PyTgCalls.two.on_left()
+        @PyTgCalls.three.on_left()
+        @PyTgCalls.four.on_left()
+        @PyTgCalls.five.on_left()
         async def stream_services_handler(_, chat_id: int):
-            await pytgcalls.stop_stream(chat_id)
+            await PyTgCalls.stop_stream(chat_id)
 
-        @pytgcalls.one.on_stream_end()
-        @pytgcalls.two.on_stream_end()
-        @pytgcalls.three.on_stream_end()
-        @pytgcalls.four.on_stream_end()
-        @pytgcalls.five.on_stream_end()
+        @PyTgCalls.one.on_stream_end()
+        @PyTgCalls.two.on_stream_end()
+        @PyTgCalls.three.on_stream_end()
+        @PyTgCalls.four.on_stream_end()
+        @PyTgCalls.five.on_stream_end()
         async def stream_end_handler1(client, update: Update):
             if not isinstance(update, StreamAudioEnded):
                 return
-            await pytgcalls.change_stream(client, update.chat_id)
+            await PyTgCalls.change_stream(client, update.chat_id)
 
 
 
