@@ -599,7 +599,7 @@ class Call(PyTgCalls):
         @self.three
         @self.four
         @self.five
-        async def stream_services_handler(_, chat_id: int):
+        async def (_, chat_id: int):
             await self.stop_stream(chat_id)
 
         @self.one
